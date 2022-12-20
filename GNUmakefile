@@ -2,7 +2,7 @@
 .PHONY: docs
 docs:
 	@mkdir -p docs
-	pushd icons && ./make-sizes.sh && popd
+	cd icons && ./make-sizes.sh && cd ..
 	./make-icns.sh
 	@install -v README.md docs/index.md
 	@sed 's/images/.\/images/' README.md > docs/index.md

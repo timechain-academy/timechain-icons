@@ -32,6 +32,8 @@ jobs:
       - name: make
         run: |
           make
+          make init
+          make docs
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
