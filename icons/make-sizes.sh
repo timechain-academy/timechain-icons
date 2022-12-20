@@ -1,9 +1,10 @@
+#!/usr/bin/env bash
 BASE=1024
 function sips_side(){
-	
-	sips -z ${SIDE}   ${SIDE}   ${BASE}x${BASE}.png --out ${SIDE}x${SIDE}.png
 
-	}
+	sips --debug -z ${SIDE}   ${SIDE}   ${BASE}x${BASE}.png --out ${SIDE}x${SIDE}.png
+
+}
 
 SIDE=$(expr $BASE / 1)   #1024
 sips_side

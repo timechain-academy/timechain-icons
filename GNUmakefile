@@ -1,3 +1,3 @@
 -:
-	@pushd icons && ./make-sizes.sh && popd
-	@./make-icns.sh
+	pushd icons && ./make-sizes.sh && popd
+	./make-icns.sh
