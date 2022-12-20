@@ -23,7 +23,7 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: macos-latest
+    runs-on: [ "ubuntu-latest" ]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -31,8 +31,8 @@ jobs:
         uses: actions/configure-pages@v2
       - name: make
         run: |
-          make
           make init
+          make
           make docs
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
