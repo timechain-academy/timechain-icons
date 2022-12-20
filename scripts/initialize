@@ -70,6 +70,8 @@ fi
 if hash brew 2>/dev/null; then
     if ! hash gawk 2>/dev/null; then
         brew install gawk
+        brew install ghostscript
+        brew install imagemagick
     fi
     #brew install python@3.8
     if ! hash docker 2>/dev/null; then
@@ -131,6 +133,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then
         if hash apt 2>/dev/null; then
             sudo apt install "$AWK"
             sudo apt update
+            sudo apt install imagemagick
             sudo apt install software-properties-common
             sudo apt install python3
             sudo apt-get install python3-pip
@@ -148,8 +151,6 @@ if [[ "$OSTYPE" == "linux"* ]]; then
             apk add python3 py3-pip
             python3 -m pip install -r requirements.txt || \
             python3 -m pip install -r ../requirements.txt
-
-
         fi
     fi
     if [[ "$OSTYPE" == "linux-arm"* ]]; then
