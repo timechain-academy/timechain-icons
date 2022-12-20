@@ -59,6 +59,9 @@ if hash apt-get 2>/dev/null; then
     python3 python3-pip mkdocs \
     jq runc containerd docker.io docker-compose \
         mkdocs
+    if ! hash majick 2>/dev/null; then
+	sudo apt-get install imagemagick
+	fi
     if ! hash pip3 2>/dev/null; then
 	sudo apt-get install python3-pip
     else
@@ -70,9 +73,11 @@ fi
 if hash brew 2>/dev/null; then
     if ! hash gawk 2>/dev/null; then
         brew install gawk
-        brew install ghostscript
-        brew install imagemagick
     fi
+	brew install ghostscript
+	if ! hash majick 2>/dev/null; then
+		brew install imagemagick
+	fi
     #brew install python@3.8
     if ! hash docker 2>/dev/null; then
         brew install --cask docker
