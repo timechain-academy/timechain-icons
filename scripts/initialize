@@ -76,7 +76,15 @@ if hash brew 2>/dev/null; then
     fi
 	brew install ghostscript
 	if ! hash majick 2>/dev/null; then
+		echo "TODO: patch brew install imagemajick for x86_64"
+		echo "TODO: patch brew install imagemajick for x86_64"
+		echo "TODO: patch brew install imagemajick for x86_64"
+		echo "TODO: patch brew install imagemajick for x86_64"
 		brew install imagemagick
+		echo "TODO: patch brew install imagemajick for x86_64"
+		echo "TODO: patch brew install imagemajick for x86_64"
+		echo "TODO: patch brew install imagemajick for x86_64"
+		echo "TODO: patch brew install imagemajick for x86_64"
 	fi
     #brew install python@3.8
     if ! hash docker 2>/dev/null; then
