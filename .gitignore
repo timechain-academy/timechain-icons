@@ -26,6 +26,7 @@ icons/96x96.png
 #we manually add .icns files to the repo
 square-banner.icns
 #
+docs/
 
 # http://www.gnu.org/software/automake
 

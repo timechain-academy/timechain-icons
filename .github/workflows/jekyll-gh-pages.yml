@@ -30,7 +30,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: make
-           run: make
+        run: |
+          make
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
