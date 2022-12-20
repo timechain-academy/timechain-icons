@@ -2,7 +2,13 @@
 BASE=1024
 function sips_side(){
 
-	sips --debug -z ${SIDE}   ${SIDE}   ${BASE}x${BASE}.png --out ${SIDE}x${SIDE}.png
+if  hash sips 2>/dev/null; then
+        sips --debug -z ${SIDE}   ${SIDE}   ${BASE}x${BASE}.png --out ${SIDE}x${SIDE}.png
+fi
+if hash majick 2>/dev/null; then
+       echo "$(whick majick)"
+       #TODO resize using imagemajick
+fi
 
 }
 

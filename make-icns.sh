@@ -4,7 +4,14 @@ BASE=1024
 cp icons/${BASE}x${BASE}.png Icon${BASE}.png
 function sips_side(){
 
+if  hash sips 2>/dev/null; then
 	sips --debug  -z ${SIDE}   ${SIDE}   Icon${BASE}.png --out icon.iconset/${SIDE}x${SIDE}.png
+fi
+if hash majick 2>/dev/null; then
+	echo "$(whick majick)"
+	#TODO resize using imagemajick
+	##sips --debug  -z ${SIDE}   ${SIDE}   Icon${BASE}.png --out icon.iconset/${SIDE}x${SIDE}.png
+fi
 
 }
 
