@@ -1,4 +1,5 @@
 .DS_Store
+scripts/get-pip.py
 #we manually add .icns files to the repo
 icon.icns
 #
