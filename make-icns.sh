@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 mkdir -p icon.iconset
 BASE=1024
-cp icons/${BASE}x${BASE}.png Icon${BASE}.png
+cp -Rf icons/${BASE}x${BASE}.png Icon${BASE}.png
 function sips_side(){
 
 if  hash sips 2>/dev/null; then
@@ -46,7 +46,7 @@ sips_side
 SIDE=$(expr $BASE / 256) #4
 sips_side
 
-cp Icon${BASE}.png icon.iconset/icon_$(expr $BASE / 2)x$(expr $BASE / 2)@2x.png
+cp -Rf Icon${BASE}.png icon.iconset/icon_$(expr $BASE / 2)x$(expr $BASE / 2)@2x.png
 
 #Usage: iconutil --convert ( icns | iconset) [--output file] file [icon-name]
 iconutil -c icns --output icon.icns icon.iconset
